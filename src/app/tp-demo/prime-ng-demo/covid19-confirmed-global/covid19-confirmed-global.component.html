@@ -1,0 +1,35 @@
+<div class="col-md-12" *ngIf="!regions">
+    <label class="m-5 center">No Regions Found</label>
+</div>
+<div class="table-responsive" *ngIf="regions">
+    <p-table tableStyleClass="table table-striped table-bordered dataTable mb-0" [value]="regions" [rows]="10">
+        <ng-template pTemplate="colgroup" let-columns>
+            <colgroup>
+                <col style="width:20%">
+                <col style="width:15%">
+                <col style="width:20%">
+                <col style="width:20%">
+                <col style="width:25%">
+            </colgroup>
+        </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+                <th>{{ 'Country'}}</th>
+                <th>{{ 'Latitude' }}</th>
+                <th>{{ 'Longitude' }}</th>
+                <th>{{ 'Jan22'}}</th>
+                <th>{{ 'Apr11'}}</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-reg>
+            <tr>
+                <td>{{reg.Country}}</td>
+                <td>{{reg.Lat}}</td>
+                <td>{{reg.Long}}</td>
+                <td>{{reg.Jan22}}</td>
+                <td><button type="button" class="btn btn-site btn-round btn-info btn-md"
+                        (click)="show(reg)">Show</button></td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
