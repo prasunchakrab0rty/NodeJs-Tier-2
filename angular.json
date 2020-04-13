@@ -3,13 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "thepynetwork": {
+    "ng-fundamentals": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -17,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/thepynetwork",
+            "outputPath": "dist/ng-fundamentals",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,8 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -68,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "thepynetwork:build"
+            "browserTarget": "ng-fundamentals:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "thepynetwork:build:production"
+              "browserTarget": "ng-fundamentals:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "thepynetwork:build"
+            "browserTarget": "ng-fundamentals:build"
           }
         },
         "test": {
@@ -94,7 +89,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -116,16 +111,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "thepynetwork:serve"
+            "devServerTarget": "ng-fundamentals:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "thepynetwork:serve:production"
+              "devServerTarget": "ng-fundamentals:serve:production"
             }
           }
         }
       }
-    }
-  },
-  "defaultProject": "thepynetwork"
+    }},
+  "defaultProject": "ng-fundamentals"
 }
