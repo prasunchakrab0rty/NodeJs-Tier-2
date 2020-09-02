@@ -7,9 +7,10 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { ProductListComponent } from "./products/product-list/product-list.component";
 import { SpecialToSpacePipe } from "./shared/pipes/special-to-space.pipe";
+import { WelcomeComponent } from './login/welcome/welcome.component';
 
 @NgModule({
-  declarations: [AppComponent, ProductListComponent, SpecialToSpacePipe],
+  declarations: [AppComponent, ProductListComponent, SpecialToSpacePipe, WelcomeComponent],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
