@@ -9,9 +9,10 @@ import { ProductListComponent } from "./products/product-list/product-list.compo
 import { SpecialToSpacePipe } from "./shared/pipes/special-to-space.pipe";
 import { WelcomeComponent } from './login/welcome/welcome.component';
 import { ProductDetailsComponent } from './products/product-details/product-details.component';
+import { StarRatingComponent } from './shared/components/star-rating/star-rating.component';
 
 @NgModule({
-  declarations: [AppComponent, ProductListComponent, SpecialToSpacePipe, WelcomeComponent, ProductDetailsComponent],
+  declarations: [AppComponent, ProductListComponent, SpecialToSpacePipe, WelcomeComponent, ProductDetailsComponent, StarRatingComponent],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
