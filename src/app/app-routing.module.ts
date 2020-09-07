@@ -5,16 +5,7 @@ import { WelcomeComponent } from "./login/welcome/welcome.component";
 import { ProductDetailsGuard } from "./shared/guards/product-details.guard";
 import { ProductDetailsComponent } from "./products/product-details/product-details.component";
 
-const routes: Routes = [
-  { path: "products", component: ProductListComponent },
-  {
-    path: "products/:id",
-    canActivate: [ProductDetailsGuard],
-    component: ProductDetailsComponent,
-  },
-  { path: "", component: WelcomeComponent },
-  { path: "**", component: WelcomeComponent },
-];
+const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
